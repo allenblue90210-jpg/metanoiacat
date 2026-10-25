@@ -18,11 +18,11 @@ A luxury black & gold single-page, fully responsive, mobile-first website for **
 | **Network** | BNB Smart Chain (BSC) |
 | **Chain ID** | `56` |
 | **Contract Address** | `0xA4555A9f6bEf7F42FB341504722163a2ee180F0d` |
-| **Total Supply** | 50,000,000,000,000 (50 Trillion) |
+| **Total Supply** | 100,000,000,000,000 (100 Trillion) |
+| **Burned Supply** | 50% (50 Trillion) |
+| **Circulating Supply** | 50% (50 Trillion) |
 | **Tax** | 0% Buy / 0% Sell |
-| **Liquidity** | 90% Locked via Team Finance |
-| **CEX & Marketing** | 5% |
-| **Airdrops & Rewards** | 5% |
+| **Liquidity** | 100% LP Burned forever |
 | **DEX** | PancakeSwap V3 |
 | **Launch Model** | 100% Fair Launch (No presale, no team allocation) |
 
@@ -42,9 +42,9 @@ A luxury black & gold single-page, fully responsive, mobile-first website for **
    - **Sticky Navbar:** Brand logo, navigation links, mobile hamburger drawer, and Buy CTA
    - **Hero:** Crowned black panther queen mascot, contract box with one-click copy, PancakeSwap & Chart buttons
    - **About:** The Queen's philosophy with 3 highlight cards (Low fees on BSC, Fast community growth, Luxury branding)
-   - **Tokenomics:** Economic facts grid and animated SVG gold donut chart (90% LP, 5% CEX/Marketing, 5% Airdrops)
+   - **Tokenomics:** Economic facts grid and animated SVG gold donut chart (50% Circulating Supply, 50% Burned to Dead Address)
    - **Roadmap:** 4-Phase strategic horizons (Awakening, Crown, Pride, Legacy) — horizontal on desktop, vertical on mobile
-   - **Security:** 6 verified pillars (LP Locked, Contract Verified, No Mint, No Honeypot, Multi-sig Treasury, Ownership Renounced) with individual proof links
+   - **Security:** 6 verified pillars (LP Burned, Contract Verified, No Mint, No Honeypot, Multi-sig Treasury, Ownership Renounced) with individual proof links
    - **How to Buy:** 4 simple acquisition steps on BNB Smart Chain
    - **Community:** *"Early holders = family"* banner with X, Telegram, DexScreener, and BSCScan buttons
    - **Footer:** Full legal meme token disclaimer, brand info, and quick links
@@ -78,23 +78,22 @@ const CONFIG = {
     bscscan: "https://bscscan.com/token/0xA4555A9f6bEf7F42FB341504722163a2ee180F0d"
   },
   security: {
-    lpLockDurationText: "12 Months (Extendable / Renewable)",
-    lpUnlockDateText: "October 24, 2027",
-    lpLockedPercentText: "90% (45,000,000,000,000 $METANOIA)",
-    lockExpiryDate: "2027-10-24"
+    lpBurnDestinationText: "Dead Address (0x00...dead)",
+    lpBurnStatusText: "100% Permanently Burned",
+    lpBurnRiskText: "0.00% (Impossible)"
   },
   proofs: {
-    lpLocked: "https://www.team.finance/view-coin/...",
+    lpBurned: "https://bscscan.com/token/0xA4555A9f6bEf7F42FB341504722163a2ee180F0d?a=0x000000000000000000000000000000000000dead",
     contractVerified: "https://bscscan.com/token/...",
     noMint: "https://bscscan.com/token/...",
     noHoneypot: "https://bscscan.com/token/...",
     multiSig: "https://bscscan.com/address/...",
-    ownershipRenounced: "https://bscscan.com/tx/..."
+    ownershipRenounced: "https://bscscan.com/token/..."
   },
   images: {
     hero: "assets/hero.png",
     logo: "assets/logo.png",
-    lpLocked: "assets/lp-locked.png",
+    lpBurned: "assets/lp-burned.png",
     contractVerified: "assets/contract-verified.png",
     noMint: "assets/no-mint.png",
     noHoneypot: "assets/no-honeypot.png"
@@ -102,7 +101,7 @@ const CONFIG = {
 };
 ```
 
-Simply replace `assets/hero.png`, `assets/logo.png`, `assets/lp-locked.png`, `assets/contract-verified.png`, `assets/no-mint.png`, or `assets/no-honeypot.png` with your preferred image files whenever you are ready.
+Simply replace `assets/hero.png`, `assets/logo.png`, `assets/lp-burned.png`, `assets/contract-verified.png`, `assets/no-mint.png`, or `assets/no-honeypot.png` with your preferred image files whenever you are ready.
 
 
 

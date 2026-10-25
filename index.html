@@ -6,14 +6,14 @@
   <title>METANOIA ($METANOIA) — The First Female Luxury Feline AI Token</title>
   
   <!-- SEO & Social Meta Tags -->
-  <meta name="description" content="Where AI meets feline royalty. METANOIA is the premier female luxury feline AI token on BNB Smart Chain. 0% Tax, 50T Supply, Locked LP. #NotJustACat #QUEEN">
+  <meta name="description" content="Where AI meets feline royalty. METANOIA is the premier female luxury feline AI token on BNB Smart Chain. 0% Tax, 100T Supply, 50% Burned, 50% Circulating Supply, 100% LP Burned. #NotJustACat #QUEEN">
   <meta name="keywords" content="METANOIA, $METANOIA, BNB Smart Chain, BSC, BEP-20, AI token, Luxury crypto, Feline AI, PancakeSwap">
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://metanoia.luxury/">
   <meta property="og:title" content="METANOIA ($METANOIA) — Where AI Meets Feline Royalty">
-  <meta property="og:description" content="The First Female Luxury Feline AI Token on BNB Smart Chain. Fair launch, 0% tax, 100% locked LP. Community from day one. Early holders = family.">
+  <meta property="og:description" content="The First Female Luxury Feline AI Token on BNB Smart Chain. Fair launch, 0% tax, 100T supply, 50% burned, 100% LP burned forever. Community from day one. Early holders = family.">
   <meta property="og:image" content="assets/hero.png">
 
   <!-- Twitter Card -->
@@ -1004,23 +1004,16 @@
       stroke-width: 26;
       filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.6));
     }
-    .segment-lp {
+    .segment-circulating {
       stroke: url(#goldLinearGradient);
-      stroke-dasharray: 565.48; /* 2 * PI * 90 */
-      stroke-dashoffset: 56.54; /* 90% is 508.932 */
+      stroke-dasharray: 282.74 282.74;
+      stroke-dashoffset: 0;
     }
-    .segment-cex {
-      stroke: #2dd4d4;
-      stroke-dasharray: 565.48;
-      stroke-dashoffset: 537.21; /* 5% */
-      transform: rotate(324deg); /* 90% = 324deg */
-      transform-origin: 50% 50%;
-    }
-    .segment-airdrop {
-      stroke: #aa771c;
-      stroke-dasharray: 565.48;
-      stroke-dashoffset: 537.21; /* 5% */
-      transform: rotate(342deg); /* 95% = 342deg */
+    .segment-burned {
+      stroke: url(#burnLinearGradient);
+      stroke-dasharray: 282.74 282.74;
+      stroke-dashoffset: 0;
+      transform: rotate(180deg);
       transform-origin: 50% 50%;
     }
 
@@ -1090,9 +1083,8 @@
       height: 12px;
       border-radius: 3px;
     }
-    .dot-lp { background: var(--gold-primary); box-shadow: 0 0 8px rgba(212, 175, 55, 0.5); }
-    .dot-cex { background: var(--cyan-accent); box-shadow: 0 0 8px var(--cyan-glow); }
-    .dot-airdrop { background: #aa771c; }
+    .dot-burn { background: #ff7675; box-shadow: 0 0 8px rgba(255, 118, 117, 0.6); }
+    .dot-circulating { background: var(--gold-primary); box-shadow: 0 0 8px rgba(212, 175, 55, 0.6); }
     .legend-percent {
       font-weight: 800;
       font-family: var(--font-heading);
@@ -1927,7 +1919,7 @@
         <span class="section-tag">Economic Blueprint</span>
         <h2 class="section-title">Royal <span class="gold-gradient-text">Tokenomics</span></h2>
         <p class="section-subtitle">
-          Pristine, fair-launch mechanics with 0% trading tax and locked liquidity.
+          Pristine, fair-launch mechanics with 0% trading tax, 50% burned supply, and permanently burned LP.
         </p>
       </div>
 
@@ -1956,18 +1948,28 @@
           </div>
 
           <div class="fact-box">
-            <span class="fact-label">Chain ID</span>
-            <span class="fact-value cyan">56</span>
-          </div>
-
-          <div class="fact-box">
             <span class="fact-label">Trading Taxes</span>
             <span class="fact-value cyan">0% Buy / 0% Sell</span>
           </div>
 
+          <div class="fact-box">
+            <span class="fact-label">Liquidity Pool</span>
+            <span class="fact-value" style="color: #4ade80;">100% LP Burned</span>
+          </div>
+
           <div class="fact-box" style="grid-column: span 2;">
             <span class="fact-label">Total Supply</span>
-            <span class="fact-value gold">50,000,000,000,000 (50 Trillion)</span>
+            <span class="fact-value gold">100,000,000,000,000 (100 Trillion)</span>
+          </div>
+
+          <div class="fact-box">
+            <span class="fact-label">Burned Allocation</span>
+            <span class="fact-value" style="color: #ff7675;">50% (50 Trillion)</span>
+          </div>
+
+          <div class="fact-box">
+            <span class="fact-label">Circulating Supply</span>
+            <span class="fact-value" style="color: var(--gold-light);">50% (50 Trillion)</span>
           </div>
 
           <div class="fact-box">
@@ -2005,22 +2007,25 @@
                   <stop offset="50%" stop-color="#d4af37" />
                   <stop offset="100%" stop-color="#aa771c" />
                 </linearGradient>
+                <linearGradient id="burnLinearGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#ff7675" />
+                  <stop offset="50%" stop-color="#d63031" />
+                  <stop offset="100%" stop-color="#b71540" />
+                </linearGradient>
               </defs>
               <!-- Background circle -->
               <circle class="donut-circle-bg" cx="110" cy="110" r="90"></circle>
-              <!-- 90% Liquidity Segment -->
-              <circle class="donut-segment segment-lp" cx="110" cy="110" r="90" title="90% Liquidity (Locked via Team Finance)"></circle>
-              <!-- 5% CEX & Marketing Segment -->
-              <circle class="donut-segment segment-cex" cx="110" cy="110" r="90" title="5% CEX Listings & Marketing"></circle>
-              <!-- 5% Airdrops & Rewards Segment -->
-              <circle class="donut-segment segment-airdrop" cx="110" cy="110" r="90" title="5% Airdrops & Community Rewards"></circle>
+              <!-- 50% Circulating Supply Segment -->
+              <circle class="donut-segment segment-circulating" cx="110" cy="110" r="90" title="50% Circulating Supply (LP Burned)"></circle>
+              <!-- 50% Burned Segment -->
+              <circle class="donut-segment segment-burned" cx="110" cy="110" r="90" title="50% Permanently Burned"></circle>
             </svg>
 
             <!-- Center Content -->
             <div class="chart-center-content">
               <img src="assets/icon-luxury.png" alt="Royal Crown" class="chart-crown-img" width="38" height="38" loading="lazy">
-              <span class="chart-center-title">100%</span>
-              <span class="chart-center-sub">Auditable</span>
+              <span class="chart-center-title">100 T</span>
+              <span class="chart-center-sub">Total Supply</span>
             </div>
           </div>
 
@@ -2028,26 +2033,18 @@
           <div class="chart-legend">
             <div class="legend-item">
               <div class="legend-indicator">
-                <span class="legend-color-dot dot-lp"></span>
-                <span>Liquidity Pool (Locked Team Finance)</span>
+                <span class="legend-color-dot dot-burn"></span>
+                <span>Burned (Dead Address)</span>
               </div>
-              <span class="legend-percent">90%</span>
+              <span class="legend-percent" style="color: #ff7675;">50%</span>
             </div>
 
             <div class="legend-item">
               <div class="legend-indicator">
-                <span class="legend-color-dot dot-cex"></span>
-                <span>CEX Listings &amp; Marketing</span>
+                <span class="legend-color-dot dot-circulating"></span>
+                <span>Circulating Supply (LP Burned)</span>
               </div>
-              <span class="legend-percent" style="color: var(--cyan-accent);">5%</span>
-            </div>
-
-            <div class="legend-item">
-              <div class="legend-indicator">
-                <span class="legend-color-dot dot-airdrop"></span>
-                <span>Airdrops &amp; Community Rewards</span>
-              </div>
-              <span class="legend-percent">5%</span>
+              <span class="legend-percent" style="color: var(--gold-primary);">50%</span>
             </div>
           </div>
 
@@ -2166,11 +2163,11 @@
         <span class="section-tag">Integrity &amp; Trust</span>
         <h2 class="section-title">Sovereign <span class="gold-gradient-text">Security</span></h2>
         <p class="section-subtitle">
-          Protected by strict smart contract constraints, locked liquidity, and complete on-chain transparency.
+          Protected by strict smart contract constraints, 100% burned liquidity, and complete on-chain transparency.
         </p>
       </div>
 
-      <!-- Featured LP Locked Card at the Top -->
+      <!-- Featured LP Burned Card at the Top -->
       <div class="art-deco-card featured-lp-card reveal">
         <span class="art-deco-corner corner-tl"></span>
         <span class="art-deco-corner corner-tr"></span>
@@ -2178,50 +2175,50 @@
         <span class="art-deco-corner corner-br"></span>
 
         <div class="featured-lp-layout">
-          <!-- Card Artwork: Panther Queen Guarding Gold Padlock -->
+          <!-- Card Artwork: Panther Queen Guarding Sacred Golden Brazier of Burning LP -->
           <div class="featured-lp-image-wrap">
-            <img src="assets/lp-locked.png" alt="METANOIA LP Locked — Black Panther Queen Guarding Gold Padlock" class="featured-lp-img" id="featured-lp-img" loading="lazy">
+            <img src="assets/lp-burned.png" alt="METANOIA LP Burned — Black Panther Queen Guarding Sacred Golden Flames" class="featured-lp-img" id="featured-lp-img" loading="lazy">
           </div>
 
           <!-- Card Content & Details -->
           <div class="featured-lp-details">
             <div class="featured-lp-badge-row">
               <span class="section-tag" style="margin-bottom: 0;">✦ Primary Security Foundation ✦</span>
-              <span class="security-status" style="font-size: 0.75rem; padding: 4px 12px;">Team Finance Vault</span>
+              <span class="security-status" style="font-size: 0.75rem; padding: 4px 12px; background: rgba(239, 68, 68, 0.15); border-color: rgba(239, 68, 68, 0.4); color: #ff7675;">100% LP Burned</span>
             </div>
 
             <div>
-              <h3 class="featured-lp-title gold-gradient-text">LP Locked</h3>
-              <p class="featured-lp-subtitle">Liquidity locked via Team Finance</p>
+              <h3 class="featured-lp-title gold-gradient-text">LP Burned</h3>
+              <p class="featured-lp-subtitle">100% Liquidity pool burned forever to dead address</p>
             </div>
 
             <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.65;">
-              90% of the total 50 Trillion $METANOIA supply is secured inside Team Finance's cryptographic liquidity locker. Liquidity pool tokens cannot be withdrawn, ensuring uncompromised security and complete protection against rug-pulls.
+              100% of the liquidity pool tokens have been permanently incinerated and sent to the BSC dead burn address (0x000000000000000000000000000000000000dead). Because LP tokens are forever destroyed, liquidity can never be extracted, withdrawn, or drained—providing irrevocable rug-pull protection for all METANOIA holders.
             </p>
 
-            <!-- Configurable Lock Expiry & Unlock Date Box -->
+            <!-- Verification Metadata Box -->
             <div class="featured-lp-expiry-box">
               <div>
-                <span class="featured-lp-expiry-label">Lock Duration</span>
-                <div class="featured-lp-expiry-val" id="featured-lp-duration">12 Months (Extendable / Renewable)</div>
+                <span class="featured-lp-expiry-label">Burn Destination</span>
+                <div class="featured-lp-expiry-val cyan-text" id="featured-lp-duration">Dead Address (0x00...dead)</div>
               </div>
               <div>
-                <span class="featured-lp-expiry-label">Unlock Date</span>
-                <div class="featured-lp-expiry-val cyan-text" id="featured-lp-unlock">October 24, 2027</div>
+                <span class="featured-lp-expiry-label">Burn Status</span>
+                <div class="featured-lp-expiry-val" style="color: #ff7675;" id="featured-lp-unlock">100% Permanently Burned</div>
               </div>
               <div>
-                <span class="featured-lp-expiry-label">Locked Allocation</span>
-                <div class="featured-lp-expiry-val" style="color: #4ade80;" id="featured-lp-percent">90% (45,000,000,000,000 $METANOIA)</div>
+                <span class="featured-lp-expiry-label">Rug-Pull Risk</span>
+                <div class="featured-lp-expiry-val" style="color: #4ade80;" id="featured-lp-percent">0.00% (Impossible)</div>
               </div>
             </div>
 
-            <!-- View Lock Proof Button -->
+            <!-- View Burn Proof Button -->
             <div class="featured-lp-actions">
-              <a href="#" id="featured-lp-proof-btn" target="_blank" rel="noopener noreferrer" class="btn btn-gold" style="padding: 13px 28px;">
-                <span>View Lock Proof</span> &rarr;
+              <a href="https://bscscan.com/token/0xA4555A9f6bEf7F42FB341504722163a2ee180F0d?a=0x000000000000000000000000000000000000dead" id="featured-lp-proof-btn" target="_blank" rel="noopener noreferrer" class="btn btn-gold" style="padding: 13px 28px;">
+                <span>View LP Burn Proof</span> &rarr;
               </a>
               <span style="font-size: 0.78rem; color: var(--text-muted);">
-                Verifiable on Team Finance &amp; BSCScan
+                Verifiable on BSCScan (Dead Address)
               </span>
             </div>
           </div>
@@ -2308,18 +2305,18 @@
 
             <div>
               <h3 class="featured-lp-title gold-gradient-text">No Mint</h3>
-              <p class="featured-lp-subtitle">No mint function. Supply is fixed at 50 trillion.</p>
+              <p class="featured-lp-subtitle">No mint function. Supply is fixed at 100 trillion.</p>
             </div>
 
             <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.65;">
-              The minting press has been permanently shattered. There is absolutely no mint function or supply alteration routine encoded within the smart contract. The total maximum supply of 50 Trillion $METANOIA is mathematically hard-capped forever, protecting your stake from devaluation or inflation.
+              The minting press has been permanently shattered. There is absolutely no mint function or supply alteration routine encoded within the smart contract. The total maximum supply of 100 Trillion $METANOIA is mathematically hard-capped forever with 50% permanently burned, protecting your stake from devaluation or inflation.
             </p>
 
             <!-- Metadata Box -->
             <div class="featured-lp-expiry-box">
               <div>
                 <span class="featured-lp-expiry-label">Total Hard-Cap</span>
-                <div class="featured-lp-expiry-val">50,000,000,000,000 $METANOIA</div>
+                <div class="featured-lp-expiry-val">100,000,000,000,000 $METANOIA</div>
               </div>
               <div>
                 <span class="featured-lp-expiry-label">Mint Functionality</span>
@@ -2686,7 +2683,7 @@
             <li><a href="https://pancakeswap.finance/swap?outputCurrency=0xA4555A9f6bEf7F42FB341504722163a2ee180F0d&chain=bsc" id="footer-link-pancake" target="_blank" rel="noopener noreferrer" class="footer-link">PancakeSwap V3</a></li>
             <li><a href="https://dexscreener.com/bsc/0xA4555A9f6bEf7F42FB341504722163a2ee180F0d" id="footer-link-chart" target="_blank" rel="noopener noreferrer" class="footer-link">DexScreener Live</a></li>
             <li><a href="https://bscscan.com/token/0xA4555A9f6bEf7F42FB341504722163a2ee180F0d" id="footer-link-bsc" target="_blank" rel="noopener noreferrer" class="footer-link">BSCScan Contract</a></li>
-            <li><a href="https://www.team.finance/view-coin/0xA4555A9f6bEf7F42FB341504722163a2ee180F0d" id="footer-link-teamfinance" target="_blank" rel="noopener noreferrer" class="footer-link">Team Finance LP Lock</a></li>
+            <li><a href="https://bscscan.com/token/0xA4555A9f6bEf7F42FB341504722163a2ee180F0d?a=0x000000000000000000000000000000000000dead" id="footer-link-lpburn" target="_blank" rel="noopener noreferrer" class="footer-link">BSCScan LP Burn Proof</a></li>
           </ul>
         </div>
 
@@ -2739,29 +2736,28 @@
         bscscan: "https://bscscan.com/token/0xA4555A9f6bEf7F42FB341504722163a2ee180F0d"
       },
 
-      // Security & LP Lock Details (Editable)
+      // Security & LP Burn Details (Editable)
       security: {
-        lpLockDurationText: "12 Months (Extendable / Renewable)",
-        lpUnlockDateText: "October 24, 2027",
-        lpLockedPercentText: "90% (45,000,000,000,000 $METANOIA)",
-        lockExpiryDate: "2027-10-24" // ISO format date for reference
+        lpBurnDestinationText: "Dead Address (0x00...dead)",
+        lpBurnStatusText: "100% Permanently Burned",
+        lpBurnRiskText: "0.00% (Impossible)"
       },
 
       // Security Verification Proof Links
       proofs: {
-        lpLocked: "https://www.team.finance/view-coin/0xA4555A9f6bEf7F42FB341504722163a2ee180F0d",
+        lpBurned: "https://bscscan.com/token/0xA4555A9f6bEf7F42FB341504722163a2ee180F0d?a=0x000000000000000000000000000000000000dead",
         contractVerified: "https://bscscan.com/token/0xA4555A9f6bEf7F42FB341504722163a2ee180F0d#code",
         noMint: "https://bscscan.com/token/0xA4555A9f6bEf7F42FB341504722163a2ee180F0d#writeContract",
         noHoneypot: "https://honeypot.is/bsc?address=0xA4555A9f6bEf7F42FB341504722163a2ee180F0d",
         multiSig: "https://bscscan.com/address/0xA4555A9f6bEf7F42FB341504722163a2ee180F0d",
-        ownershipRenounced: "https://bscscan.com/tx/0x0000000000000000000000000000000000000000000000000000000000000000"
+        ownershipRenounced: "https://bscscan.com/token/0xA4555A9f6bEf7F42FB341504722163a2ee180F0d#readContract"
       },
 
       // Mascot & Security Image Paths (Slot to replace with your custom assets)
       images: {
         hero: "assets/hero.png",
         logo: "assets/logo.png",
-        lpLocked: "assets/lp-locked.png",
+        lpBurned: "assets/lp-burned.png",
         contractVerified: "assets/contract-verified.png",
         noMint: "assets/no-mint.png",
         noHoneypot: "assets/no-honeypot.png",
@@ -2795,28 +2791,28 @@
       const heroChartBtn = document.getElementById("hero-chart-btn");
       if (heroChartBtn) heroChartBtn.href = CONFIG.chartUrl;
 
-      // Update Featured LP Locked Card Details
+      // Update Featured LP Burned Card Details
       const featuredLpImg = document.getElementById("featured-lp-img");
-      if (featuredLpImg && CONFIG.images && CONFIG.images.lpLocked) {
-        featuredLpImg.src = CONFIG.images.lpLocked;
+      if (featuredLpImg && CONFIG.images && CONFIG.images.lpBurned) {
+        featuredLpImg.src = CONFIG.images.lpBurned;
       }
 
       const featuredLpProofBtn = document.getElementById("featured-lp-proof-btn");
-      if (featuredLpProofBtn) featuredLpProofBtn.href = CONFIG.proofs.lpLocked;
+      if (featuredLpProofBtn) featuredLpProofBtn.href = CONFIG.proofs.lpBurned;
 
       const featuredLpDuration = document.getElementById("featured-lp-duration");
-      if (featuredLpDuration && CONFIG.security && CONFIG.security.lpLockDurationText) {
-        featuredLpDuration.textContent = CONFIG.security.lpLockDurationText;
+      if (featuredLpDuration && CONFIG.security && CONFIG.security.lpBurnDestinationText) {
+        featuredLpDuration.textContent = CONFIG.security.lpBurnDestinationText;
       }
 
       const featuredLpUnlock = document.getElementById("featured-lp-unlock");
-      if (featuredLpUnlock && CONFIG.security && CONFIG.security.lpUnlockDateText) {
-        featuredLpUnlock.textContent = CONFIG.security.lpUnlockDateText;
+      if (featuredLpUnlock && CONFIG.security && CONFIG.security.lpBurnStatusText) {
+        featuredLpUnlock.textContent = CONFIG.security.lpBurnStatusText;
       }
 
       const featuredLpPercent = document.getElementById("featured-lp-percent");
-      if (featuredLpPercent && CONFIG.security && CONFIG.security.lpLockedPercentText) {
-        featuredLpPercent.textContent = CONFIG.security.lpLockedPercentText;
+      if (featuredLpPercent && CONFIG.security && CONFIG.security.lpBurnRiskText) {
+        featuredLpPercent.textContent = CONFIG.security.lpBurnRiskText;
       }
 
       // Update Featured Contract Verified Card Details
@@ -2900,8 +2896,8 @@
       const footerBsc = document.getElementById("footer-link-bsc");
       if (footerBsc) footerBsc.href = CONFIG.socials.bscscan;
 
-      const footerTeam = document.getElementById("footer-link-teamfinance");
-      if (footerTeam) footerTeam.href = CONFIG.proofs.lpLocked;
+      const footerLpBurn = document.getElementById("footer-link-lpburn");
+      if (footerLpBurn) footerLpBurn.href = CONFIG.proofs.lpBurned;
 
       // Set Copyright Year
       const yearEl = document.getElementById("current-year");
